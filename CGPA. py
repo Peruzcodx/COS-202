@@ -1,17 +1,15 @@
-# COS202 CGPA CALCULATOR (Simple Version)
-
 print("----- CGPA CALCULATOR -----")
+
+courses = int(input("Number of courses: "))
 
 total_units = 0
 total_points = 0
 
-courses = int(input("Enter number of courses: "))
-
 for i in range(courses):
-    print(Course {i+1}")
+    print("\nCourse", i+1)
 
-    grade = input("Enter grade (A, B, C, D, E, F): ").upper()
-    unit = int(input("Enter course unit: "))
+    grade = input("ENTER Grade (A-F): ").upper()
+    unit = int(input("Enter course units: "))
 
     if grade == "A":
         point = 5
@@ -26,12 +24,11 @@ for i in range(courses):
     else:
         point = 0
 
-    total_units += unit
-    total_points += point * unit
+    total_points = total_points + (point * unit)
+    total_units = total_units + unit
 
 cgpa = total_points / total_units
+print("Total point: ", total_points)
+print("Total unit :", total_units)
 
-print("------ RESULT ------")
-print("Total Units:", total_units)
-print("Total Points:", total_points)
-print("Your CGPA is:", round(cgpa, 2))
+print("\nCGPA =", round(cgpa, 2))
