@@ -43,10 +43,4 @@ Grade Scale
 Files
 - cgpa.py
 
- Screenshots
-Screenshots showing program execution are included in this repository.
-
----
-
- Conclusion
-This project demonstrates the use of Python control structures such as loops and conditional statements.
+ 
